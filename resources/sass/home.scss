@@ -1,0 +1,66 @@
+// @use 'app';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: rgb(20, 16, 29);
+    font-family: Nunito, sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.5rem;
+  margin-left: -.5rem;
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+.col_3 {
+  flex: 0 0 auto;
+  width: 25%;
+  margin: 1rem 0;
+}
+.card{
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: rgba($color: #fff, $alpha: .9);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    min-height: 250px;
+    overflow-y: hidden;
+
+}
+.card_title{
+    h2{
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+
+}
+
+.card_body{
+    font-size:.9rem;
+    color: rgb(80, 80, 80);
+    .movie_vote{
+        font-weight: bold;
+    }
+
+}

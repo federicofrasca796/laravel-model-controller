@@ -1,28 +1,31 @@
 @extends('layouts.app')
-
+@section('custom-style', asset('css/home.css'))
 @section('content')
-    <h1>Avaiable movies</h1>
+    <header id="home_header">
+        <h1>Avaiable movies</h1>
+    </header>
 
-    <div class="container">
+    <main class="container">
         <div class="row">
             @forelse ($movies as $movie)
-                <div class="card">
-                    <div class="card_title">
-                        <h2>{{ $movie->title }}</h2>
-                        <div>{{ $movie->original_title }}</div>
-                    </div>
-                    <div class="card_body">
-                        <div>{{ $movie->nationality }}</div>
-                        <div>{{ $movie->vote }}</div>
+                <div class="col_3">
+                    <div class="card">
+                        <div class="card_title">
+                            <h2>{{ $movie->title }}</h2>
+                            <div class="og_title">{{ $movie->original_title }}</div>
+                        </div>
+                        <div class="card_body">
+                            <div>{{ $movie->nationality }}</div>
+                            <div class="movie_vote">{{ $movie->vote }}</div>
 
-                        <div>{{ $movie->date }}</div>
+                            <div>{{ $movie->date }}</div>
+                        </div>
                     </div>
                 </div>
-                <hr>
             @empty
                 <h3>It appears empty in here.</h3>
 
             @endforelse
         </div>
-    </div>
+    </main>
 @endsection

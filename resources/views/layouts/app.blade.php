@@ -10,6 +10,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+    {{-- CSS --}}
+    <link rel="stylesheet" href="@yield('custom-style')">
 </head>
 
 <body>
